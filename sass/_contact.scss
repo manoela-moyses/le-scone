@@ -1,0 +1,78 @@
+.contact {
+  margin-top: 12rem;
+  margin-bottom: 12rem;
+  @include d(small) {
+    margin-top: 6rem;
+    margin-bottom: 6rem;
+  }
+  form {
+    label {
+      @include type-1(18);
+      display: block;
+    }
+    input[type="text"],
+    input[type="email"],
+    textarea {
+      @include type-1(18);
+      color: $dark-text;
+      width: 100%;
+      padding: 0 0.5rem;
+      height: 4rem;
+      border: 0.2rem solid $dark-text;
+      background: transparent;
+      margin-bottom: 1em;
+      &:hover,
+      &:focus {
+        outline: none;
+        border-color: $border-color;
+      }
+    }
+    textarea {
+      height: 12rem;
+    }
+
+    input.button {
+      @include type-1(18);
+      cursor: pointer;
+      color: $light-text;
+      text-transform: uppercase;
+      border: 0.2rem solid $light-text;
+      background: transparent;
+      display: block;
+      width: 20rem;
+      padding-top: 0.5rem;
+      @include box-shadow(
+        0.5rem 0.5rem 0 -0.2rem $border-color,
+        0.5rem 0.5rem 0 0 $light-text
+      );
+      transition: 0.3s;
+      &:hover {
+        @include box-shadow(
+          0.3rem 0.3rem 0 -0.2rem $border-color,
+          0.3rem 0.3rem 0 0 $light-text
+        );
+      }
+    }
+  }
+}
+
+.contact-info {
+  display: inline-block;
+  color: $light-text;
+  margin-top: 2em;
+  margin-bottom: 3em;
+  @include d(large) {
+    float: right;
+    text-align: right;
+    margin-top: -3em;
+  }
+}
+
+.contact-map {
+  display: block;
+  @include box-shadow(0 0 0 1rem $border-color);
+  clear: both;
+  img {
+    width: 100%;
+  }
+}

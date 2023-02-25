@@ -1,0 +1,47 @@
+.menu {
+  margin-top: 12rem;
+  margin-bottom: 12rem;
+  @include d(small) {
+    margin-top: 6rem;
+    margin-bottom: 6rem;
+  }
+}
+
+.menu-item {
+  margin-bottom: 6rem;
+  h2 {
+    @include type-2(24);
+    margin-bottom: 1em;
+  }
+  li {
+    @include type-1(18);
+    line-height: 3.5rem;
+    span {
+      font-family: $title-font;
+      color: $light-text;
+      display: inline-block;
+      width: 7rem;
+      text-align: right;
+      margin-right: 1rem;
+      margin-left: -8rem;
+      @include d(small) {
+        margin-left: 0;
+        width: auto;
+      }
+    }
+  }
+  img {
+    border-radius: 50%;
+    border: 1rem solid $border-color;
+    position: absolute;
+    right: 0;
+    margin-top: 5rem;
+    @include d(large) {
+      right: 12rem;
+    }
+    @include d(small) {
+      width: 12rem;
+      margin-top: 0;
+    }
+  }
+}

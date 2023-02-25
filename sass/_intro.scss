@@ -1,0 +1,59 @@
+.intro {
+  margin-top: 6rem;
+  @include d(small) {
+    margin-top: 2rem;
+  }
+}
+
+.logo {
+  margin-bottom: 6rem;
+}
+
+.intro-info {
+  border-right: 0.2rem solid $dark-text;
+  max-width: 32rem;
+  p {
+    padding-top: 1rem;
+  }
+  p:first-child {
+    border-bottom: 0.2rem solid $dark-text;
+    padding-bottom: 1rem;
+  }
+}
+
+.intro-phone {
+  color: $light-text;
+  @include d(small) {
+    margin-bottom: 4rem;
+  }
+  &::after {
+    content: "/ / / /";
+    display: block;
+    margin-top: 20rem;
+    font-size: 22rem;
+    letter-spacing: -9rem;
+    color: $dark-text;
+    @include d(medium) {
+      margin-top: 8rem;
+      font-size: 16rem;
+      letter-spacing: -7rem;
+    }
+    @include d(small) {
+      display: none;
+    }
+  }
+}
+
+.open {
+  display: inline-block;
+  width: 1.2rem;
+  height: 1.2rem;
+  background-color: $success;
+  border-radius: 50%;
+  margin-left: 3rem;
+}
+
+.intro-photo {
+  border: 1rem solid $border-color;
+  width: 100%;
+}

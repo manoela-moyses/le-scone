@@ -1,0 +1,35 @@
+//Colors
+$background-color: #edece4;
+$border-color: #cbc6b9;
+$dark-text: #2a2426;
+$light-text: #988c77;
+$success: #1ab912;
+
+//Typography
+$title-font: "Aref Ruqaa", serif;
+$text-font: "PT Mono", monospace;
+
+@mixin type-1($size) {
+  font-family: $text-font;
+  @if $size == 18 {
+    font-size: 1.8rem;
+    line-height: 3rem;
+  }
+}
+
+@mixin type-2($size) {
+  font-family: $title-font;
+  @if $size == 18 {
+    font-size: 1.8rem;
+    line-height: 3rem;
+  } @else if $size == 24 {
+    font-size: 2.4rem;
+    line-height: 3rem;
+  }
+}
+
+@mixin box-shadow($shadow...) {
+  -webkit-box-shadow: $shadow;
+  -moz-box-shadow: $shadow;
+  box-shadow: $shadow;
+}
